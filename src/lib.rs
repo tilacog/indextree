@@ -378,6 +378,11 @@ impl NodeId {
             arena[parent].first_child = Some(new_sibling);
         }
     }
+
+    /// Return a reference to the inner index value.
+    pub fn index(&self) -> &usize {
+        &self.index
+    }
 }
 
 macro_rules! impl_node_iterator {
